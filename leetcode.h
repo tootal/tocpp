@@ -11,6 +11,6 @@ using namespace std;
 #include "tree/tree.h"
 
 // 调试输出库
-#include "print.h"
+#include "print/print.h"
 
 #endif // LEETCODE_H
