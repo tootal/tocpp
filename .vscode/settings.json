@@ -2,6 +2,7 @@
     "files.associations": {
         "*.rmd": "markdown",
         "type_traits": "cpp",
-        "scoped_allocator": "cpp"
+        "scoped_allocator": "cpp",
+        "string": "cpp"
     }
 }
