@@ -16,7 +16,12 @@ struct TreeNode {
 };
 
 // 从字符串创建一颗二叉树
-TreeNode *create_tree(const std::string &s) {
+TreeNode *create_tree(const std::string &str) {
+    string s(str);
+    if (s.front() != '(') {
+        s.insert(s.begin(), '(');
+        s.insert(s.end(), ')');
+    }
     size_t n = s.length();
     auto expect_int = [&](size_t &i) {
         int ans = 0;
