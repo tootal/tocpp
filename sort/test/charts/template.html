@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.0.2/dist/echarts.min.js"
+        integrity="sha256-NZlQFkif+Cpc0rqEGGpSmaU55Vw4aMWK5KC3BRACd/Q=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 600px;height:400px;"></div>
+    <script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: '排序算法运行时间'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['std::sort', 'quick_sort', 'bubble_sort']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: [/*--xAxis.data--*/]
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [
+                {
+                    name: 'std::sort',
+                    type: 'line',
+                    smooth: true,
+                    data: [/*--std.data--*/]
+                },
+                {
+                    name: 'quick_sort',
+                    type: 'line',
+                    smooth: true,
+                    data: [/*--quick.data--*/]
+                },
+                {
+                    name: 'bubble_sort',
+                    type: 'line',
+                    smooth: true,
+                    data: [/*--bubble.data--*/]
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>

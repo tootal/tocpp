@@ -1,1 +1,5 @@
 *.exe
+main
+/sort/test/gen
+/sort/test/data
+/sort/test/log
