@@ -1,4 +1,9 @@
-main: test
+all: charts
+
+charts: log
+	cd charts && python gen.py 
+
+log: test
 	./test.sh
 
 test: data test.cpp

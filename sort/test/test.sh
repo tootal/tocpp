@@ -8,6 +8,6 @@ function test_sort() {
     done
 }
 
-test_sort std 1 22
-test_sort quick 1 22
-test_sort bubble 1 14
+test_sort std 10 23
+test_sort quick 10 23
+test_sort bubble 10 14
