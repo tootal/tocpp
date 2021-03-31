@@ -2,7 +2,6 @@
 #include "list.h"
 
 int main() {
-    ListNode *list = create_list(1, 2, 3, 4);
-    std::cout << list << std::endl;
+    std::cout << ListNode{1, 2, 3, 4, 5} << std::endl;
     return 0;
 }

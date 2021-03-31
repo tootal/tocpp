@@ -15,6 +15,11 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+// 创建一个空二叉树（返回空指针）
+TreeNode *create_tree() {
+    return nullptr;
+}
+
 // 从字符串创建一颗二叉树
 TreeNode *create_tree(const std::string &str) {
     string s(str);
